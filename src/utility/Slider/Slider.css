@@ -1,0 +1,28 @@
+.slick .slick-prev:before, .slick .slick-next:before{
+    font-size: 30px;
+}
+
+.slick .slick-arrow{
+    z-index: 100;
+}
+
+.slick .slick-arrow.slick-prev{
+    left: 15px;
+}
+
+.slick .slick-arrow.slick-next{
+    right: 25px;
+}
+
+.main-header-text{
+    font-size: 30px !important;
+      line-height: 36px !important;
+      letter-spacing: normal !important;
+      color: #484848 !important;
+      padding-top: 6px !important;
+      padding-bottom: 6px !important;
+      margin: 0px !important;
+      margin-bottom: 20px !important;
+      padding: 0px !important;
+      font-weight: bold;
+  }
