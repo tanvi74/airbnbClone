@@ -5,15 +5,17 @@ import axios from 'axios'
 import Spinner from '../../utility/Spinner/Spinner';
 import Cities from '../../utility/City/Cities';
 import Activities from '../../utility/Activity/Activities';
+import Venues from '../../utility/Venue/Venues'
 
 class Home extends React.Component{
 
     state = {
         cities: [],
-        europeCities: [],
-        asiaCities: [],
-        exoticCities: [],
-        activities: []
+        europeCities: {},
+        asiaCities: {},
+        exoticCities: {},
+        activities: [],
+        recVenues: {}
     }
 
     async componentDidMount(){
@@ -53,10 +55,17 @@ class Home extends React.Component{
             this.setState({
                 activities: activities.data
             })
+
+            const venuesUrl = `${window.apiHost}/venues/recommended`;
+            const venues = await axios(venuesUrl);
+
+            this.setState({
+                recVenues: venues.data
+            })
     }
 
     render(){
-        console.log(this.state.activities)
+        // console.log(this.state.activities)
         if(this.state.cities.length===0)
             return <Spinner/>
         
@@ -77,12 +86,17 @@ class Home extends React.Component{
                                 <div className="col s12">
                                     <Cities cities={this.state.cities} header="Recommended Cities for you"/>
                                 </div>
+
+                                <div className="col s12">
+                                    <Activities activities={this.state.activities} header="Today in your Area"/>
+                                </div>
+
                                 <div className="col s12">
                                     <Cities cities={this.state.europeCities.cities} header={this.state.europeCities.header}/>
                                 </div>
 
                                 <div className="col s12">
-                                    <Activities activities={this.state.activities}/>
+                                    <Venues venues={this.state.recVenues} header={this.state.recVenues.header}/>
                                 </div>
 
                                 <div className="col s12">
