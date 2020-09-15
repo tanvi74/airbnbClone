@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {bindActionCreators} from 'redux';
+import openModal from '../../Actions/openModal';
 import './Modal.css';
 
 class Modal extends Component{
@@ -9,6 +10,10 @@ class Modal extends Component{
 
     }
 
+    closeModal = ()=>{
+        this.props.openModal('closed','');
+    }
+    
     render(){
 
         let modalInlineStyle;
@@ -19,6 +24,7 @@ class Modal extends Component{
         else{
             modalInlineStyle = {display: 'none'}
         }
+
         return(
             <div className="site-modal" style={modalInlineStyle}>
                 <div className="modal-content">
@@ -42,7 +48,7 @@ function mapStateToProps(state){
 
 function mapDispatchToProps(dispatcher){
     return bindActionCreators({
-
+        openModal : openModal,
     },dispatcher)
 }
 

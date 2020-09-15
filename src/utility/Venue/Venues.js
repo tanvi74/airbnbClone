@@ -11,7 +11,7 @@ class Venues extends Component{
              venues = this.props.venues.venues.map((venue,i)=>{
                 // console.log(venue);
                 return(
-                    <div key={i} className="col m6 l3">
+                    <div key={i} className="col m6 l3 s12">
                         <Venue venue={venue}/>
                     </div>
                 )
