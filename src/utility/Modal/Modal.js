@@ -17,7 +17,7 @@ class Modal extends Component{
     render(){
 
         let modalInlineStyle;
-        console.log(this.props.siteModal);
+        // console.log(this.props.siteModal);
         if(this.props.siteModal.openClose === "open"){
             modalInlineStyle = {display: 'block'}
         }

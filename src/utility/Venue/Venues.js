@@ -5,7 +5,7 @@ import Venue from './Venue'
 
 class Venues extends Component{
     render(){
-        // console.log(this.props.venues.venues);
+        console.log(this.props.venues);
         var venues
         if(this.props.venues.venues !== undefined){
              venues = this.props.venues.venues.map((venue,i)=>{

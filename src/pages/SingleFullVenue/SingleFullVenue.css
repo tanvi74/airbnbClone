@@ -73,3 +73,9 @@
 .point-desc{
     margin-bottom: 20px;
 }
+
+.loginSignUp{
+    cursor: pointer;
+    color:blue;
+    font-weight: 600;
+}
