@@ -9,7 +9,7 @@ import Modal from './utility/Modal/Modal'
 import CityVenue from './pages/CityVenues/CityVenue'
 import PaymentSuccess from './pages/PaymentSuccess/PaymentSuccess';
 import Account from './pages/Account/Account'
-
+import Search from './pages/Search/Search'
 
 class App extends React.Component {
   render(){
@@ -21,6 +21,7 @@ class App extends React.Component {
         <Route exact path="/city/:cityName" component={CityVenue} />
         <Route exact path="/payment-success/:stripeToken" component={PaymentSuccess} />
         <Route exact path="/account" component={Account} />
+        <Route exact path="/search/:searchTerm" component={Search} />
         <Route path="/" component={Modal} />
       </Router>
     );

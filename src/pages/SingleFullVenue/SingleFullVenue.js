@@ -75,7 +75,7 @@ class SingleFullVenue extends Component{
                 totalPrice,
                 diffDays,
                 pricePerNight,
-                checkIn: this.state.checkOut,
+                checkIn: this.state.checkIn,
                 checkOut: this.state.checkOut,
                 token:this.props.auth.token,
                 currency: 'USD'
