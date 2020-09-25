@@ -19,6 +19,7 @@ class Home extends React.Component{
     }
 
     async componentDidMount(){
+        
             const citiesUrl = `${window.apiHost}/cities/recommended`;
             
             const europeCitiesUrl =`${window.apiHost}/cities/europe`;
