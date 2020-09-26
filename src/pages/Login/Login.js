@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import './Login.css';
 
@@ -49,7 +49,7 @@ function Login(props) {
               });
             // we call our register action to update our auth reducer!!
             dispatch(regAction(resp.data));
-            
+
         }
     }
 
